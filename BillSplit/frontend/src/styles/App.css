@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Allows main content to grow and push footer down */
+  padding: 20px 0; /* Add some vertical padding */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #0056b3;
+}
+
+.button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button.secondary:hover {
+  background-color: #5a6268;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.auth-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.auth-switch a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Dashboard Page Specific Styles */
+.dashboard-page section,
+.group-detail-page section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.dashboard-page h3,
+.group-detail-page h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.group-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.group-list .group-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.group-list .group-item a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.group-list .group-item a:hover {
+  text-decoration: underline;
+}
+
+.group-list .group-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.dashboard-page .button,
+.group-detail-page .button {
+  margin-bottom: 15px; /* Add margin below buttons */
+}
+
+/* Group Detail Page */
+.group-description {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.member-list, .balances-list, .transactions-list, .owed-list {
+    list-style: none;
+    padding: 0;
+}
+
+.member-list li, .balances-list li, .transactions-list li, .owed-list li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member-list li:hover {
+    background-color: #f5f5f5;
+}
+
+.transactions-list li {
+    font-weight: 500;
+    color: #364f6b;
+}
+
+.balances-list li {
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.balances-list li span {
+    font-weight: bold;
+    color: #28a745; /* Green for positive, red for negative */
+}
+.balances-list li span.negative {
+    color: #dc3545;
+}
+
+.home-page {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-page p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.home-page .auth-links,
+.home-page .dashboard-link {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.features-section,
+.about-us-section {
+  margin-top: 50px;
+  text-align: left;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.features-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.features-section li {
+  margin-bottom: 10px;
+}

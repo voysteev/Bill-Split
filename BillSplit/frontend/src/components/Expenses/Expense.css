@@ -1,0 +1,220 @@
+/* General styling for forms and lists within components */
+.add-expense-form-container,
+.expense-list-container,
+.balance-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+h4 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.add-expense-form, .edit-expense-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.split-method-radios {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.split-method-radios label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.participant-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.participant-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.participant-list li:last-child {
+  border-bottom: none;
+}
+
+.participant-list label {
+  margin-bottom: 0; /* Override default label margin */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.participant-share-input {
+  width: 80px;
+  padding: 5px;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px; /* For single button */
+}
+
+.button.primary {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.button.primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.button.secondary {
+  background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.button.secondary:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+/* Expense List Specific */
+.expense-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap */
+}
+
+.expense-details {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.expense-details p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.expense-details strong {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.expense-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px; /* For mobile, if details wrap */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+  color: #0056b3;
+}
+
+.icon-button.delete-button {
+  color: #dc3545;
+}
+
+.icon-button.delete-button:hover {
+  color: #a71d2a;
+}
+
+.edit-expense-form {
+  width: 100%; /* Take full width of parent li */
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: flex-end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .expense-details {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .expense-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

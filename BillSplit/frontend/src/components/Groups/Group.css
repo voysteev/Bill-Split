@@ -1,0 +1,76 @@
+/* frontend/src/components/Groups/Group.css */
+
+.group-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.group-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.group-item:hover {
+  background-color: #f0f0f0;
+}
+
+.group-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the whole area clickable */
+  padding: 15px;
+}
+
+.group-info h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #007bff; /* Primary color for group name */
+}
+
+.group-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.group-owner {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Group Detail Specific Styling (if using GroupDetail.js) */
+.group-detail-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.group-detail-card h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.group-detail-card .group-description {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.group-detail-card .member-list li {
+  background-color: #f3f4f6;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}

@@ -1,0 +1,50 @@
+.app-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative; /* Changed from fixed to relative */
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: auto; /* Push footer to the bottom if content is short */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #61dafb;
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-links {
+    margin-top: 10px;
+  }
+  .footer-links a {
+    margin: 0 8px; /* Reduce spacing */
+  }
+}
